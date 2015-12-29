@@ -176,41 +176,41 @@ SPI MISO                     3  | B3            D5  |  18
 ### Pin Capabilities
 
 * **Digital: All pins can be used for general purpose I/O** 
-* Supports INPUT, OUTPUT, and INPUT_PULLUP.
-* Each pin can source or sink a maximum of 20 mA.
-* Internal pull-up resistors of 20-50 Kohms (disconnected by default).
-* Use the pinMode(), digitalWrite(), and digitalRead() functions.
+  * Supports INPUT, OUTPUT, and INPUT_PULLUP.
+  * Each pin can source or sink a maximum of 20 mA.
+  * Internal pull-up resistors of 20-50 Kohms (disconnected by default).
+  * Use the pinMode(), digitalWrite(), and digitalRead() functions.
 * **Analog Inputs: 8 pins (MT-DB-U6) or 11 pins (MT-DB-U4) can be configured as ADC analog inputs.**
-* These are available using the analogRead() function.
-* All pins can be used for GPIO and some pins can be used for other digital functions (ie. pwm or serial).
-* Each pin provides 10 bits of resolution (1024 values).
-* Each pin measures from ground to 5.0 volts.
-* The upper end of the measurement range can be changed using the AREF pin and the analogReference() function.
+  * These are available using the analogRead() function.
+  * All pins can be used for GPIO and some pins can be used for other digital functions (ie. pwm or serial).
+  * Each pin provides 10 bits of resolution (1024 values).
+  * Each pin measures from ground to 5.0 volts.
+  * The upper end of the measurement range can be changed using the AREF pin and the analogReference() function.
 * **PWM: 7 pins (MT-DB-U6, MT-DB-U4) or 4 pins (MT-DB-U2, MT-DB-U1) can be configured as PWM outputs.**
-* Available using the analogWrite() function.
-* Each pin provides 8 bits of resolution (256 values) by default.
+  * Available using the analogWrite() function.
+  * Each pin provides 8 bits of resolution (256 values) by default.
 * **External Interrupts: Up to 8 pins can be configured with external interrupts.**
-* 6 pins (MT-DB-U6), 5 pins (MT-DB-U4), or 8 pins (MT-DB-U2, MT-DB-U1).
-* Available using the attachInterrupt() function.
+  * 6 pins (MT-DB-U6), 5 pins (MT-DB-U4), or 8 pins (MT-DB-U2, MT-DB-U1).
+  * Available using the attachInterrupt() function.
 * **Serial: 1 pair of pins can be configured for TTL serial I/O.**
-* MT-DB-U6: Serial1: pin 31 (RX) and pin 32 (TX).
-* MT-DB-U4: Serial1: pin 20 (RX) and pin 21 (TX).
-* MT-DB-U2, MT-DB-U1: Serial1: pin 15 (RX) and pin 16 (TX).
+  * MT-DB-U6: Serial1: pin 31 (RX) and pin 32 (TX).
+  * MT-DB-U4: Serial1: pin 20 (RX) and pin 21 (TX).
+  * MT-DB-U2, MT-DB-U1: Serial1: pin 15 (RX) and pin 16 (TX).
 * **SPI: 3 or 4 pins can be configured for SPI I/O (SPI).**
-* MT-DB-U6: Pin 21 (MOSI), pin 20 (SCK), pin 22 (MISO), and optionally pin 19 (SS, not currently used).
-* MT-DB-U4: Pin 15 (MOSI), pin 14 (SCK), pin 16 (MISO), and optionally pin 13 (SS, not currently used).
-* MT-DB-U2, MT-DB-U1: Pin 2 (MOSI), pin 1 (SCK), pin 3 (MISO), and optionally pin 0 (SS, not currently used).
-* SPI communication using the SPI library.
+  * MT-DB-U6: Pin 21 (MOSI), pin 20 (SCK), pin 22 (MISO), and optionally pin 19 (SS, not currently used).
+  * MT-DB-U4: Pin 15 (MOSI), pin 14 (SCK), pin 16 (MISO), and optionally pin 13 (SS, not currently used).
+  * MT-DB-U2, MT-DB-U1: Pin 2 (MOSI), pin 1 (SCK), pin 3 (MISO), and optionally pin 0 (SS, not currently used).
+  * SPI communication using the SPI library.
 * **TWI (I2C): 2 pins can be configured for TWI I/O (Wire).**
-* MT-DB-U6: Pin 30 (SDA) and pin 29 (SCL).
-* MT-DB-U4: Pin 19 (SDA) and pin 18 (SCL).
-* MT-DB-U2, MT-DB-U1: TWI not present
-* TWI communication using the Wire library.
+  * MT-DB-U6: Pin 30 (SDA) and pin 29 (SCL).
+  * MT-DB-U4: Pin 19 (SDA) and pin 18 (SCL).
+  * MT-DB-U2, MT-DB-U1: TWI not present
+  * TWI communication using the Wire library.
 * **LED: One pin can be configured to light the onboard LED (LED_BUILTIN).**
-* Pin 0 (MT-DB-U6), pin 25 (MT-DB-U4), or pin 13 (MT-DB-U2, MT-DB-U1).
-* Bring the pin HIGH to turn the LED on.
+  * Pin 0 (MT-DB-U6), pin 25 (MT-DB-U4), or pin 13 (MT-DB-U2, MT-DB-U1).
+  * Bring the pin HIGH to turn the LED on.
 * **AREF: One pin can be configured as an AREF analog input.**
-* The upper end of the analog measurement range can be changed using the analogReference() function.
+  * The upper end of the analog measurement range can be changed using the analogReference() function.
 * **Reset: Bring this line LOW to reset the microcontroller.**
 
 
@@ -419,6 +419,7 @@ uses a watchdog reset to enter the bootloader).
 
 The default CDC bootloader has the following compile-time options defined:
 
+```
 #define ENABLE_LED_BOOT
 #define ENABLE_LED_APPLICATION
 #define DISABLE_JTAG_APPLICATION
@@ -426,6 +427,7 @@ The default CDC bootloader has the following compile-time options defined:
 #define ENABLE_BOOT_KEY
 #define ENABLE_RESET_AFTER_PROGRAMMING
 #define NO_LOCK_BYTE_WRITE_SUPPORT
+```
 
 An alternate version with the above options undefined is available on the website named
 Bootloader_no_options.hex. Use it if the default options interfere with your application.
