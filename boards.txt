@@ -1,0 +1,298 @@
+# See: http://code.google.com/p/arduino/wiki/Platforms
+
+menu.cpu=Processor
+menu.com=Communications
+menu.fcpu=Frequency/Voltage
+
+
+##############################################################
+
+# MattairTech MT-DB-U1 (AT90USB162)
+mtdbu1.name=MattairTech MT-DB-U1 (AT90USB162)
+
+mtdbu1.vid.0=0x16D0
+mtdbu1.pid.0=0x0557
+mtdbu1.vid.1=0x16D0
+mtdbu1.pid.1=0x0856
+
+mtdbu1.upload.tool=arduino:avrdude
+mtdbu1.upload.protocol=avr109
+mtdbu1.upload.speed=57600
+mtdbu1.upload.disable_flushing=true
+mtdbu1.upload.use_1200bps_touch=true
+mtdbu1.upload.wait_for_upload_port=true
+mtdbu1.upload.native_usb=true
+
+mtdbu1.bootloader.tool=arduino:avrdude
+mtdbu1.bootloader.low_fuses=0x7f
+mtdbu1.bootloader.high_fuses=0xd8
+mtdbu1.bootloader.extended_fuses=0xfe
+mtdbu1.bootloader.unlock_bits=0x3F
+mtdbu1.bootloader.lock_bits=0x2F
+
+mtdbu1.menu.cpu.at90usb162=AT90USB162
+mtdbu1.menu.cpu.at90usb162.upload.maximum_size=12288
+mtdbu1.menu.cpu.at90usb162.upload.maximum_data_size=512
+mtdbu1.menu.cpu.at90usb162.build.extra_flags=-D__AVR_AT90USB162__ {build.usb_flags}
+mtdbu1.menu.cpu.at90usb162.build.mcu=at90usb162
+mtdbu1.menu.cpu.at90usb162.bootloader.file=LUFA-CDC/Hex/Bootloader-u1_16.hex
+mtdbu1.menu.cpu.at90usb82=AT90USB82
+mtdbu1.menu.cpu.at90usb82.upload.maximum_size=4096
+mtdbu1.menu.cpu.at90usb82.upload.maximum_data_size=512
+mtdbu1.menu.cpu.at90usb82.build.extra_flags=-D__AVR_AT90USB82__ {build.usb_flags}
+mtdbu1.menu.cpu.at90usb82.build.mcu=at90usb82
+mtdbu1.menu.cpu.at90usb82.bootloader.file=LUFA-CDC/Hex/Bootloader-u1_8.hex
+
+mtdbu1.menu.fcpu.16mhz=16MHZ (5V only)
+mtdbu1.menu.fcpu.16mhz.build.f_cpu=16000000L
+mtdbu1.menu.fcpu.8mhz=8MHZ (3.3V & 5V)
+mtdbu1.menu.fcpu.8mhz.build.f_cpu=8000000L
+
+mtdbu1.build.core=arduino
+mtdbu1.build.variant=mtdbu1
+mtdbu1.build.variant_system_lib=
+mtdbu1.build.usb_product="MT-DB-U1"
+mtdbu1.build.usb_manufacturer="MattairTech"
+mtdbu1.build.vid=0x16D0
+
+mtdbu1.build.board=CDC_ONLY
+mtdbu1.menu.com.cdc=CDC_ONLY
+mtdbu1.menu.com.cdc.build.board=CDC_ONLY
+mtdbu1.menu.com.cdc.build.pid=0x0557
+# mtdbu1.menu.com.msd=MSD_ONLY
+# mtdbu1.menu.com.msd.build.board=MSD_ONLY
+# mtdbu1.menu.com.msd.build.pid=0x0A0C
+# mtdbu1.menu.com.hid=HID_ONLY
+# mtdbu1.menu.com.hid.build.board=HID_ONLY
+# mtdbu1.menu.com.hid.build.pid=0x0856
+mtdbu1.menu.com.cdc_hid=CDC_HID
+mtdbu1.menu.com.cdc_hid.build.board=CDC_HID
+mtdbu1.menu.com.cdc_hid.build.pid=0x0856
+mtdbu1.menu.com.none=USB_DISABLED
+mtdbu1.menu.com.none.build.board=USB_DISABLED
+mtdbu1.menu.com.none.build.pid=0x0856
+
+##############################################################
+
+# MattairTech MT-DB-U2 (ATmega32U2)
+mtdbu2.name=MattairTech MT-DB-U2 (ATmega32U2)
+
+mtdbu2.vid.0=0x16D0
+mtdbu2.pid.0=0x0557
+mtdbu2.vid.1=0x16D0
+mtdbu2.pid.1=0x0856
+
+mtdbu2.upload.tool=arduino:avrdude
+mtdbu2.upload.protocol=avr109
+mtdbu2.upload.speed=57600
+mtdbu2.upload.disable_flushing=true
+mtdbu2.upload.use_1200bps_touch=true
+mtdbu2.upload.wait_for_upload_port=true
+mtdbu2.upload.native_usb=true
+
+mtdbu2.bootloader.tool=arduino:avrdude
+mtdbu2.bootloader.low_fuses=0x7f
+mtdbu2.bootloader.high_fuses=0xd8
+mtdbu2.bootloader.extended_fuses=0xce
+mtdbu2.bootloader.unlock_bits=0x3F
+mtdbu2.bootloader.lock_bits=0x2F
+
+mtdbu2.menu.cpu.atmega32u2=ATmega32U2
+mtdbu2.menu.cpu.atmega32u2.upload.maximum_size=28672
+mtdbu2.menu.cpu.atmega32u2.upload.maximum_data_size=1024
+mtdbu2.menu.cpu.atmega32u2.build.extra_flags=-D__AVR_ATmega32U2__ {build.usb_flags}
+mtdbu2.menu.cpu.atmega32u2.build.mcu=atmega32u2
+mtdbu2.menu.cpu.atmega32u2.bootloader.file=LUFA-CDC/Hex/Bootloader-u2_32.hex
+mtdbu2.menu.cpu.atmega16u2=ATmega16U2
+mtdbu2.menu.cpu.atmega16u2.upload.maximum_size=12288
+mtdbu2.menu.cpu.atmega16u2.upload.maximum_data_size=512
+mtdbu2.menu.cpu.atmega16u2.build.extra_flags=-D__AVR_ATmega16U2__ {build.usb_flags}
+mtdbu2.menu.cpu.atmega16u2.build.mcu=atmega16u2
+mtdbu2.menu.cpu.atmega16u2.bootloader.file=LUFA-CDC/Hex/Bootloader-u2_16.hex
+mtdbu2.menu.cpu.atmega8u2=ATmega8U2
+mtdbu2.menu.cpu.atmega8u2.upload.maximum_size=4096
+mtdbu2.menu.cpu.atmega8u2.upload.maximum_data_size=512
+mtdbu2.menu.cpu.atmega8u2.build.extra_flags=-D__AVR_ATmega8U2__ {build.usb_flags}
+mtdbu2.menu.cpu.atmega8u2.build.mcu=atmega8u2
+mtdbu2.menu.cpu.atmega8u2.bootloader.file=LUFA-CDC/Hex/Bootloader-u2_8.hex
+
+mtdbu2.menu.fcpu.16mhz=16MHZ (5V only)
+mtdbu2.menu.fcpu.16mhz.build.f_cpu=16000000L
+mtdbu2.menu.fcpu.8mhz=8MHZ (3.3V & 5V)
+mtdbu2.menu.fcpu.8mhz.build.f_cpu=8000000L
+
+mtdbu2.build.core=arduino
+mtdbu2.build.variant=mtdbu2
+mtdbu2.build.variant_system_lib=
+mtdbu2.build.usb_product="MT-DB-U2"
+mtdbu2.build.usb_manufacturer="MattairTech"
+mtdbu2.build.vid=0x16D0
+
+mtdbu2.build.board=CDC_ONLY
+mtdbu2.menu.com.cdc=CDC_ONLY
+mtdbu2.menu.com.cdc.build.board=CDC_ONLY
+mtdbu2.menu.com.cdc.build.pid=0x0557
+# mtdbu2.menu.com.msd=MSD_ONLY
+# mtdbu2.menu.com.msd.build.board=MSD_ONLY
+# mtdbu2.menu.com.msd.build.pid=0x0A0C
+mtdbu2.menu.com.cdc_hid=CDC_HID
+mtdbu2.menu.com.cdc_hid.build.board=CDC_HID
+mtdbu2.menu.com.cdc_hid.build.pid=0x0856
+mtdbu2.menu.com.none=USB_DISABLED
+mtdbu2.menu.com.none.build.board=USB_DISABLED
+mtdbu2.menu.com.none.build.pid=0x0856
+
+##############################################################
+
+# MattairTech MT-DB-U4 (ATmega32U4)
+mtdbu4.name=MattairTech MT-DB-U4 (ATmega32U4)
+
+mtdbu4.vid.0=0x16D0
+mtdbu4.pid.0=0x0557
+mtdbu4.vid.1=0x16D0
+mtdbu4.pid.1=0x0856
+
+mtdbu4.upload.tool=arduino:avrdude
+mtdbu4.upload.protocol=avr109
+mtdbu4.upload.speed=57600
+mtdbu4.upload.disable_flushing=true
+mtdbu4.upload.use_1200bps_touch=true
+mtdbu4.upload.wait_for_upload_port=true
+mtdbu4.upload.native_usb=true
+
+mtdbu4.bootloader.tool=arduino:avrdude
+mtdbu4.bootloader.low_fuses=0x7f
+mtdbu4.bootloader.high_fuses=0x98
+mtdbu4.bootloader.extended_fuses=0xcb
+mtdbu4.bootloader.unlock_bits=0x3F
+mtdbu4.bootloader.lock_bits=0x2F
+
+mtdbu4.menu.cpu.atmega32u4=ATmega32U4
+mtdbu4.menu.cpu.atmega32u4.upload.maximum_size=28672
+mtdbu4.menu.cpu.atmega32u4.upload.maximum_data_size=2560
+mtdbu4.menu.cpu.atmega32u4.build.extra_flags=-D__AVR_ATmega32U4__ {build.usb_flags}
+mtdbu4.menu.cpu.atmega32u4.build.mcu=atmega32u4
+mtdbu4.menu.cpu.atmega32u4.bootloader.file=LUFA-CDC/Hex/Bootloader-u4_32.hex
+mtdbu4.menu.cpu.atmega16u4=ATmega16U4
+mtdbu4.menu.cpu.atmega16u4.upload.maximum_size=12288
+mtdbu4.menu.cpu.atmega16u4.upload.maximum_data_size=1280
+mtdbu4.menu.cpu.atmega16u4.build.extra_flags=-D__AVR_ATmega16U4__ {build.usb_flags}
+mtdbu4.menu.cpu.atmega16u4.build.mcu=atmega16u4
+mtdbu4.menu.cpu.atmega16u4.bootloader.file=LUFA-CDC/Hex/Bootloader-u4_16.hex
+
+mtdbu4.menu.fcpu.16mhz=16MHZ (5V only)
+mtdbu4.menu.fcpu.16mhz.build.f_cpu=16000000L
+mtdbu4.menu.fcpu.8mhz=8MHZ (3.3V & 5V)
+mtdbu4.menu.fcpu.8mhz.build.f_cpu=8000000L
+
+mtdbu4.build.core=arduino
+mtdbu4.build.variant=mtdbu4
+mtdbu4.build.variant_system_lib=
+mtdbu4.build.usb_product="MT-DB-U4"
+mtdbu4.build.usb_manufacturer="MattairTech"
+mtdbu4.build.vid=0x16D0
+
+mtdbu4.build.board=CDC_ONLY
+mtdbu4.menu.com.cdc=CDC_ONLY
+mtdbu4.menu.com.cdc.build.board=CDC_ONLY
+mtdbu4.menu.com.cdc.build.pid=0x0557
+# mtdbu4.menu.com.msd=MSD_ONLY
+# mtdbu4.menu.com.msd.build.board=MSD_ONLY
+# mtdbu4.menu.com.msd.build.pid=0x0A0C
+mtdbu4.menu.com.cdc_hid=CDC_HID
+mtdbu4.menu.com.cdc_hid.build.board=CDC_HID
+mtdbu4.menu.com.cdc_hid.build.pid=0x0856
+mtdbu4.menu.com.cdc_midi_hid=CDC_MIDI_HID
+mtdbu4.menu.com.cdc_midi_hid.build.board=CDC_MIDI_HID
+mtdbu4.menu.com.cdc_midi_hid.build.pid=0x0B34
+# mtdbu4.menu.com.cdc_msd_hid=CDC_MSD_HID
+# mtdbu4.menu.com.cdc_msd_hid.build.board=CDC_MSD_HID
+# mtdbu4.menu.com.cdc_msd_hid.build.pid=0x0B40
+mtdbu4.menu.com.none=USB_DISABLED
+mtdbu4.menu.com.none.build.board=USB_DISABLED
+mtdbu4.menu.com.none.build.pid=0x0856
+
+##############################################################
+
+# MattairTech MT-DB-U6 (AT90USB 646|647|1286|1287)
+mtdbu6.name=MattairTech MT-DB-U6 (AT90USB 646|647|1286|1287)
+
+mtdbu6.vid.0=0x16D0
+mtdbu6.pid.0=0x0557
+mtdbu6.vid.1=0x16D0
+mtdbu6.pid.1=0x0856
+
+mtdbu6.upload.tool=arduino:avrdude
+mtdbu6.upload.protocol=avr109
+mtdbu6.upload.speed=57600
+mtdbu6.upload.disable_flushing=true
+mtdbu6.upload.use_1200bps_touch=true
+mtdbu6.upload.wait_for_upload_port=true
+mtdbu6.upload.native_usb=true
+
+mtdbu6.bootloader.tool=arduino:avrdude
+mtdbu6.bootloader.low_fuses=0x7f
+mtdbu6.bootloader.high_fuses=0x9a
+mtdbu6.bootloader.extended_fuses=0xfb
+mtdbu6.bootloader.unlock_bits=0x3F
+mtdbu6.bootloader.lock_bits=0x2F
+
+mtdbu6.menu.cpu.at90usb646=AT90USB646
+mtdbu6.menu.cpu.at90usb646.upload.maximum_size=61440
+mtdbu6.menu.cpu.at90usb646.upload.maximum_data_size=4096
+mtdbu6.menu.cpu.at90usb646.build.extra_flags=-D__AVR_AT90USB646__ {build.usb_flags}
+mtdbu6.menu.cpu.at90usb646.build.mcu=at90usb646
+mtdbu6.menu.cpu.at90usb646.bootloader.file=LUFA-CDC/Hex/Bootloader-u6_646.hex
+mtdbu6.menu.cpu.at90usb647=AT90USB647
+mtdbu6.menu.cpu.at90usb647.upload.maximum_size=61440
+mtdbu6.menu.cpu.at90usb647.upload.maximum_data_size=4096
+mtdbu6.menu.cpu.at90usb647.build.extra_flags=-D__AVR_AT90USB647__ {build.usb_flags}
+mtdbu6.menu.cpu.at90usb647.build.mcu=at90usb647
+mtdbu6.menu.cpu.at90usb647.bootloader.file=LUFA-CDC/Hex/Bootloader-u6_647.hex
+mtdbu6.menu.cpu.at90usb1286=AT90USB1286
+mtdbu6.menu.cpu.at90usb1286.upload.maximum_size=126976
+mtdbu6.menu.cpu.at90usb1286.upload.maximum_data_size=8192
+mtdbu6.menu.cpu.at90usb1286.build.extra_flags=-D__AVR_AT90USB1286__ {build.usb_flags}
+mtdbu6.menu.cpu.at90usb1286.build.mcu=at90usb1286
+mtdbu6.menu.cpu.at90usb1286.bootloader.file=LUFA-CDC/Hex/Bootloader-u6_1286.hex
+mtdbu6.menu.cpu.at90usb1287=AT90USB1287
+mtdbu6.menu.cpu.at90usb1287.upload.maximum_size=126976
+mtdbu6.menu.cpu.at90usb1287.upload.maximum_data_size=8192
+mtdbu6.menu.cpu.at90usb1287.build.extra_flags=-D__AVR_AT90USB1287__ {build.usb_flags}
+mtdbu6.menu.cpu.at90usb1287.build.mcu=at90usb1287
+mtdbu6.menu.cpu.at90usb1287.bootloader.file=LUFA-CDC/Hex/Bootloader-u6_1287.hex
+
+mtdbu6.menu.fcpu.16mhz=16MHZ (5V only)
+mtdbu6.menu.fcpu.16mhz.build.f_cpu=16000000L
+mtdbu6.menu.fcpu.8mhz=8MHZ (3.3V & 5V)
+mtdbu6.menu.fcpu.8mhz.build.f_cpu=8000000L
+
+mtdbu6.build.core=arduino
+mtdbu6.build.variant=mtdbu6
+mtdbu6.build.variant_system_lib=
+mtdbu6.build.usb_product="MT-DB-U6"
+mtdbu6.build.usb_manufacturer="MattairTech"
+mtdbu6.build.vid=0x16D0
+
+mtdbu6.build.board=CDC_ONLY
+mtdbu6.menu.com.cdc=CDC_ONLY
+mtdbu6.menu.com.cdc.build.board=CDC_ONLY
+mtdbu6.menu.com.cdc.build.pid=0x0557
+# mtdbu6.menu.com.msd=MSD_ONLY
+# mtdbu6.menu.com.msd.build.board=MSD_ONLY
+# mtdbu6.menu.com.msd.build.pid=0x0A0C
+mtdbu6.menu.com.cdc_hid=CDC_HID
+mtdbu6.menu.com.cdc_hid.build.board=CDC_HID
+mtdbu6.menu.com.cdc_hid.build.pid=0x0856
+mtdbu6.menu.com.cdc_midi_hid=CDC_MIDI_HID
+mtdbu6.menu.com.cdc_midi_hid.build.board=CDC_MIDI_HID
+mtdbu6.menu.com.cdc_midi_hid.build.pid=0x0B34
+# mtdbu6.menu.com.cdc_msd_hid=CDC_MSD_HID
+# mtdbu6.menu.com.cdc_msd_hid.build.board=CDC_MSD_HID
+# mtdbu6.menu.com.cdc_msd_hid.build.pid=0x0B40
+mtdbu6.menu.com.none=USB_DISABLED
+mtdbu6.menu.com.none.build.board=USB_DISABLED
+mtdbu6.menu.com.none.build.pid=0x0856
+
+##############################################################
+
